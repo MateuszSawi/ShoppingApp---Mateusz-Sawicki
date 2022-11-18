@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import productsData from '../../../data/products';
 import Product from './Product/Product';
 import styles from './Products.module.scss'
@@ -12,15 +12,24 @@ const Products = props => {
   // const { id } = location.id;
 
   // const {type} = useParams();
-  // const stateParamVal = useLocation().state.stateParam;
+  const location = useLocation();
+
+  const [locationState, setLocationState] = React.useState({id:''});
+
+  React.useEffect(() => {
+    console.log('location: ', location.state.from.id);
+
+    setLocationState(location.state.from.id)
+  }, []);
   // console.log('products:', type);
   // console.log('products:', stateParamVal);
 
-  console.log(Products);
+  console.log('MOJE ID: ', locationState);
+  
   return (
     <section className={styles.sectionProducts}>
       
-      <div>props.id:{props.id}    | params:   {props.key}</div>
+      <div>props.id:{props.id}   | params:   {props.key}</div>
       
       
     </section>

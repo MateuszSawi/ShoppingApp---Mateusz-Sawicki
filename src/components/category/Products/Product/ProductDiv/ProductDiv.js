@@ -6,10 +6,8 @@ import { Link } from 'react-router-dom';
 const ProductDiv = props => {
   return (
       <Link
-      onClick={e => console.log(props.name, props.id)} to={{
-        pathname: "/pdp/id",
-        id: '2'
-      }}>
+      onClick={e => console.log(props.name, props.id)} 
+      to="/pdp/:id" state={{from: props}}>
         <div className={styles.productDiv}>
           <ProductImage name={props.name} availability={props.availability}/>
           <ProductLabel name={props.name} price={props.price} availability={props.availability}/>
@@ -22,3 +20,9 @@ export default ProductDiv;
 
 
 // to="/pdp/:id"
+
+
+// onClick={e => console.log(props.name, props.id)} to={{
+//   pathname: "/pdp/id",
+//   id: '2'
+// }}>

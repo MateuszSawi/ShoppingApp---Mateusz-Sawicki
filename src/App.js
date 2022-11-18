@@ -12,7 +12,7 @@ const App = () => {
       <Container>
         <Routes>
           <Route path="/" element={<Category />} />
-          <Route path="/pdp/id" element={<PDP />} />
+          <Route exact path="/pdp/:id" element={<PDP />} />
         </Routes>
       </Container>
     </>
