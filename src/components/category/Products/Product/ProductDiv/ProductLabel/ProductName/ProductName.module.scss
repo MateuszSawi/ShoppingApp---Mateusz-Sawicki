@@ -1,0 +1,19 @@
+@import '../../../../../../../styles/settings.scss';
+
+.productName {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 160%;
+  text-align: left;
+  text-decoration: none;
+}
+
+.productNameAvailable {
+  color: $color-dark;
+}
+
+.productNameOutOfStock {
+  color: $color-outofstock;
+}

@@ -1,0 +1,18 @@
+@import '../../../../../styles/settings.scss';
+
+.productDiv {
+  background-color: $color-light;
+  height: 100%;
+  border: 20px solid;
+  border-color: $color-light;
+
+  // text-decoration: none;
+}
+
+.productDiv:hover {
+  filter: drop-shadow(0px 4px 35px rgba(168, 172, 176, 0.19));
+}
+
+a:link {
+  text-decoration: none;
+}
