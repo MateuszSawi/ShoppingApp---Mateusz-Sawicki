@@ -1,0 +1,15 @@
+@import '../../../../../styles/settings.scss';
+
+.smallImagesContainer {
+  height: 100%;
+  width: 120px;
+  background-color: $color-light;
+}
+
+.smallImagesContainer img {
+  margin: 0 0 35px 0;
+  cursor: pointer;
+}
+.smallImagesContainer img:hover {
+  box-shadow: 0px 0px 10px #808080;
+}

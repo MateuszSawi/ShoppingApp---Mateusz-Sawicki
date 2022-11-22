@@ -9,7 +9,16 @@ const Product = props => {
   // console.log('products:', props);
   return (
     <div className={styles.product}>
-      <ProductDiv id={props.id} name={props.name} price={props.price} availability={props.availability}/>
+      <ProductDiv 
+        id={props.id} 
+        name={props.name} 
+        state={props.state} 
+        price={props.price} 
+        sizes={props.sizes}
+        colors={props.colors}
+        availability={props.availability} 
+        category={props.category}
+        description={props.description} />
     </div>
   );
 };

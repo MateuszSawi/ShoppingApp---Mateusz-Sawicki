@@ -11,7 +11,7 @@ const ProductImage = props => {
       <img 
         className={clsx({[styles.image]: props.availability === 'out of stock'})}
         alt={props.name}
-        src={`${process.env.PUBLIC_URL}/images/products/${props.name}.png`} 
+        src={`${process.env.PUBLIC_URL}/images/products/${props.id}.png`} 
       />
         <div className={clsx({[styles.textOutOfStock]: props.availability === 'out of stock'},
           {[styles.textAvailable]: props.availability === 'available'})}>

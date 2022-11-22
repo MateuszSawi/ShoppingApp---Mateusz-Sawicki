@@ -1,5 +1,4 @@
-import styles from '../Product.module.scss';
-
+import styles from './ProductImage.module.scss';
 
 const ProductImage = props => {
 
@@ -8,9 +7,12 @@ const ProductImage = props => {
       <img 
           className={styles.image}
           alt={props.title}
-          src={`${process.env.PUBLIC_URL}/images/products/shirt-${props.name}--${props.currentColor}.jpg`} />
-      </div>
+          src={`${process.env.PUBLIC_URL}/images/products/${props.id}/${props.id}big${props.currentColor}.png`} />
+
+    </div>
   )
 }
 
 export default ProductImage;
+
+// ${props.id}

@@ -1,60 +1,37 @@
 import styles from './Product.module.scss';
 import PropTypes from 'prop-types'
-import { useState , useMemo} from 'react';
+import { useState , useMemo, useEffect} from 'react';
+import ProductImages from './ProductImages/ProductImages';
 import ProductImage from './ProductImage/ProductImage';
 import ProductForm from './ProductForm/ProductForm';
 
 
 
 const Product = props => {
-  const data = props.data;
 
-  // const [currentColor, setCurrentColor] = useState(data.colors[0])
-  // console.log('colors:',currentColor);
+  const [currentColor, setCurrentColor] = useState(props.colors[0])
 
-  // const [currentSize, setCurrentSize] = useState(data.sizes[0].name)
-  // console.log('setSize',currentSize);
-
-  // const prepareColorClassName = color => {
-  // return styles[color + 'Color'] 
-  // };
-
-  // const getPrice = useMemo(() =>{
-  //   const suma = data.sizes.find( ({ name }) => name === currentSize)
-  //   return data.basePrice + suma.additionalPrice
-  // }, [data.sizes, data.basePrice, currentSize]);
+  const [currentSize, setCurrentSize] = useState(props.sizes[0].name)
  
   const hundleSubmit = (e) => {
     e.preventDefault()
     console.log('Summary');
     console.log('========');
-    console.log('Name:', data.title);
-    // console.log('Price:', getPrice);
-    // console.log('Size:', currentSize);
-    // console.log('Color:', currentColor);
+    console.log('Size:', currentSize);
+    console.log('Color:', currentColor);
   }
 
   return (
-    <article className={styles.product}>
-       {/* <ProductImage title={data.title} name={data.name} currentColor={currentColor}/> */}
-      <div>
-        <header>
-          <h2 className={styles.name}>{data.title}</h2>
-          {/* <span className={styles.price}>Price: {getPrice}$</span> */}
-        </header>
-
-        {/* <ProductForm 
-          data={data}
+    <div className={styles.product}>
+       <ProductImages id={props.id} setCurrentColor={setCurrentColor} currentColor={currentColor} colors={props.colors}/>
+       <ProductImage id={props.id} currentColor={currentColor}/>
+       <ProductForm data={props}
           hundleSubmit={hundleSubmit}
           currentSize={currentSize}
           setCurrentSize={setCurrentSize}
           currentColor={currentColor}
-          setCurrentColor={setCurrentColor}
-          prepareColorClassName={prepareColorClassName}
-          getPrice={getPrice} /> */}
-
-      </div>
-    </article>
+          setCurrentColor={setCurrentColor} />
+    </div>
   )
 };
 
@@ -100,3 +77,26 @@ export default Product;
             <span className="fa fa-shopping-cart" />
           </Button>
         </form> */
+
+        //------
+
+      //   <ProductImage id={props.id}/>
+      // <div>
+      //   <header>
+      //     <h1 className={styles.name}>{props.name}</h1>
+      //     <h2 className={styles.name}>{props.state}</h2>
+      //     <p>Price: </p>
+      //     <p>{props.price}$</p>
+      //   </header>
+
+      //   <ProductForm 
+      //     data={props}
+      //     hundleSubmit={hundleSubmit}
+      //     currentSize={currentSize}
+      //     setCurrentSize={setCurrentSize}
+      //     currentColor={currentColor}
+      //     setCurrentColor={setCurrentColor}
+      //     prepareColorClassName={prepareColorClassName}
+      //      /> 
+
+      // </div>

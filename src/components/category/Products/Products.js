@@ -8,7 +8,20 @@ const Products = () => {
   // console.log('products:', products);
   return (
     <section className={styles.sectionProducts}>
-      {products.map(product => <Product key={product.id}  id={product.id} name={product.name} price={product.price} availability={product.availability}/>)}
+      {products.map(product => 
+        <Product 
+          key={product.id}
+          id={product.id}
+          name={product.name}
+          state={product.state}
+          price={product.price}
+          sizes={product.sizes}
+          colors={product.colors}
+          availability={product.availability}
+          category={product.category}
+          description={product.description}
+        />
+      )}
     </section>
   );
 };

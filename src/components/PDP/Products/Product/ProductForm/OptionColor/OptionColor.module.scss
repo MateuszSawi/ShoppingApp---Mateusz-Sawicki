@@ -1,0 +1,120 @@
+@use 'sass:math';
+@import '../../../../../../styles/settings.scss';
+
+.colors {
+  margin-top: 20px;
+}
+
+.optionLabel {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  margin: 0;
+
+  cursor: default;
+}
+
+// .buttonBorder {
+//   box-sizing: border-box;
+//   border: 1px solid #5ECE7B;
+//   margin: 8px;
+//   padding: 2px;
+//   background-color: #e74c3c;
+// }
+
+.choices {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  button {
+    width: 32px;
+    height: 32px;
+    left: 44px;
+    top: 2px;
+
+    border: 1x solid;
+    // color: inherit;
+    font: inherit;
+    // background: $color-dark;
+    // border-radius: math.div($radius, 2);
+    padding: $base-size;
+    margin: math.div($base-size, 2.5) $base-size;
+    // background: rgba(47, 53, 66, 0.5);
+    min-width: $base-size * 3;
+    min-height: $base-size * 3;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    // transition: $transition;
+
+    &.active {
+      // opacity: 1;
+      // transform: scale(1.2);
+      // background: rgb(47, 53, 66);
+      // box-sizing: border-box;
+      outline: 1.5px solid #5ECE7B;
+      // border: 1px solid #5ECE7B;
+      outline-offset: 1.5px;
+    }
+
+    &.blackColor {
+      background: #000;
+    }
+  
+    &.redColor {
+      background: #e74c3c;
+    }
+  
+    &.whiteColor {
+      background: #fff;
+    }
+  
+    &.blueColor {
+      background: #3498db;
+    }
+  
+    &.greenColor {
+      background: #2ecc71;
+    }
+
+    &.grayColor {
+      background: #808080;
+    }
+
+    &.pinkColor {
+      background: #FFC0CB;
+    }
+
+    &.orangeColor {
+      background: #FFA500;
+    }
+
+    &.yellowColor {
+      background: #FFFF00;
+    }
+
+    &.brownColor {
+      background: #964B00;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+}
+
+
+.button {
+  position: absolute;
+  top: -$base-size * 2;
+  right: -$base-size * 2;
+  font-size: $base-size * 2;
+  border-radius: 100%;
+  width: $base-size * 5;
+  height: $base-size * 5;
+}

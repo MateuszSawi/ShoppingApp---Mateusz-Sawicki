@@ -6,32 +6,30 @@ import styles from './Products.module.scss'
 import { useLocation, useParams } from 'react-router-dom'
 
 const Products = props => {
-  // const [products]  = useState(productsData);
-  // console.log('products:', products);
-  // const location = useLocation();
-  // const { id } = location.id;
-
-  // const {type} = useParams();
   const location = useLocation();
 
-  const [locationState, setLocationState] = React.useState({id:''});
+  // const [clickedProductId, setCurrentProductId] = React.useState({id:''});
 
-  React.useEffect(() => {
-    console.log('location: ', location.state.from.id);
+  // React.useEffect(() => {
+  //   console.log('location: ', location.state.from.id);
 
-    setLocationState(location.state.from.id)
-  }, []);
-  // console.log('products:', type);
-  // console.log('products:', stateParamVal);
+  //   setCurrentProductId(location.state.from.id)
+  // }, []);
 
-  console.log('MOJE ID: ', locationState);
-  
+  // console.log('location.state.from: ', location.state.from);
+  let product = location.state.from;
+
   return (
     <section className={styles.sectionProducts}>
-      
-      <div>props.id:{props.id}   | params:   {props.key}</div>
-      
-      
+      <Product 
+        id={product.id}
+        name={product.name}
+        state={product.state}
+        price={product.price}
+        sizes={product.sizes}
+        colors={product.colors}
+        availability={product.availability}
+        description={product.description} />
     </section>
   );
 };

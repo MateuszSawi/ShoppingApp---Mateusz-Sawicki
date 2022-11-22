@@ -1,24 +1,29 @@
 import styles from './CategoryFilter.module.scss';
+import { useState} from 'react';
 
 const CategoryFilter = () => {
+
+  const [currentFilter, setCurrentFilter] = useState('');
+  console.log(currentFilter);
+
   return(
     <div className={styles.categories}>
       <ul> 
         <li>
           <div className={styles.singleCategory}>
-            <a href="#" onClick={e => console.log('WOMEN FILTER')}>WOMEN</a>
+            <a href={currentFilter} onClick={e => setCurrentFilter('WOMEN')}>WOMEN</a>
           </div>
         </li>
         
         <li>
           <div className={styles.singleCategory}>
-            <a href="#" onClick={e => console.log('MEN FILTER')}>MEN</a>
+            <a href={currentFilter} onClick={e => setCurrentFilter('MEN')}>MEN</a>
           </div>
         </li>
         
         <li>
           <div className={styles.singleCategory}>
-            <a href="#" onClick={e => console.log('KIDS FILTER')}>KIDS</a>
+            <a href={currentFilter} onClick={e => setCurrentFilter('KIDS')}>KIDS</a>
           </div>
         </li>
       </ul>     

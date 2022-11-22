@@ -1,22 +1,27 @@
-import styles from "../Product.module.scss";
-import Button from "./Button/Button";
+import styles from "./ProductForm.module.scss";
+import CartButton from "./CartButton/CartButton";
 import OptionColor from "./OptionColor/OptionColor";
 import OptionSize from "./OptionSize/OptionSize";
 import PropTypes from 'prop-types';
+import FormTitle from './FormTitle/FormTitle';
+import Price from "./Price/Price";
+import Description from "./Description/Description";
 
 const ProductForm = props => {
   return(
-    <form onSubmit={props.hundleSubmit}>
-      <OptionSize data={props.data} currentSize={props.currentSize} setCurrentSize={props.setCurrentSize} />
+    <div className={styles.formContainer}>
+      <FormTitle data={props.data}/>
+      <form onSubmit={props.hundleSubmit}>
+        <OptionSize data={props.data} currentSize={props.currentSize} setCurrentSize={props.setCurrentSize} />
 
-      <OptionColor data={props.data} currentColor={props.currentColor} setCurrentColor={props.setCurrentColor}
-        prepareColorClassName={props.prepareColorClassName}/>
-        
-          <Button className={styles.button}>
-            <span className="fa fa-shopping-cart" />
-          </Button>
-    </form>
+        <OptionColor data={props.data} currentColor={props.currentColor} setCurrentColor={props.setCurrentColor} />
 
+        <Price data={props.data} />
+          
+        <CartButton data={props.data}/>
+        <Description data={props.data}/>
+      </form>
+    </div>
   )
 }
 

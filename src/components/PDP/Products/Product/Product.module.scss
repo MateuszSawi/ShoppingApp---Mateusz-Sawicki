@@ -2,16 +2,17 @@
 @import '../../../../styles/settings.scss';
 
 .product {
-  display: inline-block;
+  // display: inline-block;
+  display: flex;
   flex-wrap: wrap;
   margin: ($base-size * 6) ($base-size * 3);
-  background: $background-gradient;
+  background: #fff;
   // border-radius: $radius;
-  box-shadow: $box-shadow;
+  // box-shadow: $box-shadow;
   padding: ($base-size * 2) $base-size;
   position: relative;
 
-  width: 28%;
+  width: 100%;
   
   // display: flex;
   flex-direction: column;
@@ -20,103 +21,103 @@
 
   // position: absolute;
   // width: 386px;
-  height: 444px;
+  height: 100%;
   // left: calc(50% - 386px/2 - 427px);
   // bottom: 191px;
 }
 
-.imageContainer {
-  flex: 0 0 40%;
-  width: 40%;
-  padding: 0 ($base-size * 2);
-  margin-left: -($base-size * 4);
-  margin-top: -($base-size * 3);
-  min-width: 200px;
-}
+// .imageContainer {
+//   flex: 0 0 40%;
+//   width: 40%;
+//   padding: 0 ($base-size * 2);
+//   margin-left: -($base-size * 4);
+//   margin-top: -($base-size * 3);
+//   min-width: 200px;
+// }
 
-.image {
-  width: 100%;
-  border-radius: $radius;
-  box-shadow: $box-shadow;
-}
+// .image {
+//   width: 100%;
+//   border-radius: $radius;
+//   box-shadow: $box-shadow;
+// }
 
-.name {
-  margin: $base-size 0;
-  font-size: $base-size * 3;
-}
+// .name {
+//   margin: $base-size 0;
+//   font-size: $base-size * 3;
+// }
 
-.price {
-  font-size: $base-size * 1.5;
-}
+// .price {
+//   font-size: $base-size * 1.5;
+// }
 
-.optionLabel {
-  margin: $base-size 0;
-}
+// .optionLabel {
+//   margin: $base-size 0;
+// }
 
-.choices {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
+// .choices {
+//   display: flex;
+//   padding: 0;
+//   margin: 0;
+//   list-style-type: none;
 
-  button {
-    border: none;
-    color: inherit;
-    font: inherit;
-    background: $color-dark;
-    border-radius: math.div($radius, 2);
-    padding: $base-size;
-    margin: math.div($base-size, 2.5) $base-size;
-    background: rgba(47, 53, 66, 0.5);
-    min-width: $base-size * 3;
-    min-height: $base-size * 3;
-    text-align: center;
-    cursor: pointer;
-    transition: $transition;
+//   button {
+//     border: none;
+//     color: inherit;
+//     font: inherit;
+//     background: $color-dark;
+//     border-radius: math.div($radius, 2);
+//     padding: $base-size;
+//     margin: math.div($base-size, 2.5) $base-size;
+//     background: rgba(47, 53, 66, 0.5);
+//     min-width: $base-size * 3;
+//     min-height: $base-size * 3;
+//     text-align: center;
+//     cursor: pointer;
+//     transition: $transition;
 
-    &.active {
-      opacity: 1;
-      transform: scale(1.2);
-      background: rgb(47, 53, 66);
-    }
+//     &.active {
+//       opacity: 1;
+//       transform: scale(1.2);
+//       background: rgb(47, 53, 66);
+//     }
 
-    &.blackColor {
-      background: #000;
-    }
+//     &.blackColor {
+//       background: #000;
+//     }
   
-    &.redColor {
-      background: #e74c3c;
-    }
+//     &.redColor {
+//       background: #e74c3c;
+//     }
   
-    &.whiteColor {
-      background: #fff;
-    }
+//     &.whiteColor {
+//       background: #fff;
+//     }
   
-    &.blueColor {
-      background: #3498db;
-    }
+//     &.blueColor {
+//       background: #3498db;
+//     }
   
-    &.greenColor {
-      background: #2ecc71;
-    }
+//     &.greenColor {
+//       background: #2ecc71;
+//     }
 
-    &:first-child {
-      margin-left: 0;
-    }
-  }
+//     &:first-child {
+//       margin-left: 0;
+//     }
+//   }
 
-}
+// }
 
-.sizes .choices button:hover{
-  background: rgb(47, 53, 66);
-}
+// .sizes .choices button:hover{
+//   background: rgb(47, 53, 66);
+// }
 
-.button {
-  position: absolute;
-  top: -$base-size * 2;
-  right: -$base-size * 2;
-  font-size: $base-size * 2;
-  border-radius: 100%;
-  width: $base-size * 5;
-  height: $base-size * 5;
-}
+// .button {
+//   position: absolute;
+//   top: -$base-size * 2;
+//   right: -$base-size * 2;
+//   font-size: $base-size * 2;
+//   border-radius: 100%;
+//   width: $base-size * 5;
+//   height: $base-size * 5;
+// }
