@@ -7,7 +7,7 @@ const Cart = () => {
         <img 
           className={styles.cartIcon}
           alt={styles.cartIcon}
-          src={`${process.env.PUBLIC_URL}/Empty-Cart.png`} /> 
+          src={`${process.env.PUBLIC_URL}/Empty Cart.png`} /> 
       </button>
     </div>  
   );

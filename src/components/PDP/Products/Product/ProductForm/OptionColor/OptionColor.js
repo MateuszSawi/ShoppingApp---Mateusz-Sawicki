@@ -16,7 +16,7 @@ const OptionColor = props => {
           {props.data.colors.map(color =>
               <li key={color}>
                 <button type="button" className={clsx(prepareColorClassName(color), props.currentColor === color && styles.active)} 
-                  onClick={e => props.setCurrentColor ( color )} />
+                  onClick={e => props.setCurrentColor(color)} />
               </li>
             )}
         </ul>

@@ -1,6 +1,6 @@
 import Products from './components/PDP/Products/Products';
 
-const PDP = () => {
+const PDP = props => {
 
   return (
       <Products />
@@ -8,3 +8,5 @@ const PDP = () => {
 };
 
 export default PDP;
+
+// currentColor={props.currentColor} setCurrentColor={props.setCurrentColor} currentSize={props.currentSize} setCurrentSize={props.setCurrentSize} 

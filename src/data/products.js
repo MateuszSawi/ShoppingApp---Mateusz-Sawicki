@@ -17,8 +17,8 @@ const productsData = [
   },
   {
     id: 2,
-    name: 'Apollo',
-    state: 'Running Short',
+    name: 'Nulla',
+    state: 'Vivamus Dolor',
     price: 30.00,
     colors: ['orange', 'yellow', 'pink'],
     sizes: [
@@ -33,8 +33,8 @@ const productsData = [
   },
   {
     id: 3,
-    name: 'Apollo',
-    state: 'Running Short',
+    name: 'Nullam Accumsan',
+    state: 'Interdum Et',
     price: 25.00,
     colors: ['gray', 'yellow', 'white'],
     sizes: [
@@ -49,8 +49,8 @@ const productsData = [
   },
   {
     id: 4,
-    name: 'Apollo',
-    state: 'Running Short',
+    name: 'Fusce',
+    state: 'Quisque Quis',
     price: 50.10,
     colors: ['white', 'green', 'pink'],
     sizes: [
@@ -59,14 +59,14 @@ const productsData = [
       { name: 'L'},
       { name: 'XL'}
     ],
-    category: 'MEN',
+    category: 'WOMEN',
     availability: 'available',
     description: 'Donec a porta urna. Mauris sollicitudin ut orci quis fermentum. Pellentesque vel commodo magna. Donec vel odio non augue efficitur accumsan. Proin tincidunt imperdiet risus, vel convallis sem vehicula sed. Nullam augue nulla, finibus a tempus sed, tincidunt vitae dui. '
   },
   {
     id: 5,
-    name: 'Apollo',
-    state: 'Running Short',
+    name: 'Interdum Et',
+    state: 'Sed',
     price: 20.05,
     colors: ['gray', 'pink', 'brown'],
     sizes: [
@@ -81,8 +81,8 @@ const productsData = [
   },
   {
     id: 6,
-    name: 'Apollo',
-    state: 'Running Short',
+    name: 'Etiam',
+    state: 'Nunc Porttitor',
     price: 47.90,
     colors: ['gray', 'blue', 'pink'],
     sizes: [

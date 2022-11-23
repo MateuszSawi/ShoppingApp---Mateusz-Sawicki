@@ -3,54 +3,65 @@
 .currencyIcon {
   border: none;
   background-color: $color-light;
+  cursor: pointer;
 }
 
 .currencyContainer {
   display: inline-block; 
-  position: relative; 
-  // margin: 0 36px 0 0; 
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: flex-end;
+  // position: relative;
+  position: absolute;
   align-items: center;
   padding: 0px;
   gap: 22px;
-  // top: 20%;
+  height: 100%;
+  width: auto;
+  overflow: visible;
+  
+  right: 50px;
 }
 
-.currencyIcon:hover {
-  background-color: #000;
-}
-
-.currenciesDiv a{
-  display: block; 
-}
-
-
-
-// .currencyContainer ul li{ 
-//   display: block; 
-//   margin: 0 0 12px 0; 
-//   // display: none;
-// } 
-
-// .currencyIcon:hover ul li{
-//   display: block; 
-//   // background-color: #7f8c8d;   
+// .active {
+//   display: none;
+//   height: 1000%;
 // }
 
-// .currencyContainer ul{       
-//   display: block; 
-//   text-align: center; 
-//   position: absolute; 
-//   background-color: #7f8c8d;      /*szary*/ 
-//   left: 50%; 
-//   transform: translateX(-50%); 
-//   padding: 0px 12px; 
-// } 
+.currenciesDiv {
+  display: inline-block;
+  // display: none;
+  position: relative;
+  top: 90px;
+  transform: translateX(25%);
+  // border: 1px solid;
+  float: none;
+  z-index: 1;
+}
 
-// .currencyContainer ul li a{ 
-//   color: #8e44ad;                 /*fiolet*/
-//   display: block; 
-//   padding: 0 24px; 
-// }
+.currenciesDiv ul {
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+  height: 100%;
+}
+
+.buttonDiv:hover {
+  background: $color-success;
+}
+
+.buttonClass {
+  width: 114px;
+  height: 45px;
+  border: none;
+  background-color: $color-light;
+}
+
+.buttonClass img {
+  transform: translateX(40%);
+}
+
+.buttonClass:hover {
+  background: #EEEEEE;
+}
+
+.currency {
+  display: flex;
+}

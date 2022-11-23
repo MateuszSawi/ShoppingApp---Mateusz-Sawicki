@@ -1,11 +1,20 @@
 @import '../../../../../styles/settings.scss';
 
+.container {
+  position: relative;
+}
+
+.container:hover .button {
+  display: block;
+  cursor: pointer;
+}
+
 .productDiv {
   background-color: $color-light;
   height: 100%;
   border: 20px solid;
   border-color: $color-light;
-
+  position: relative;
   // text-decoration: none;
 }
 
@@ -16,3 +25,21 @@
 a:link {
   text-decoration: none;
 }
+
+.button {
+  position: absolute;
+  bottom: 100px;
+  width: 52px;
+  height: 52px;
+  right: 35px;
+  bottom: 70px;
+  border-radius: 50%;
+  border: none;
+  background-color: #5ECE7B;
+  display: none;
+}
+
+// .productDiv:hover .button {
+//   display: block;
+//   cursor: pointer;
+// }

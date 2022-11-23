@@ -1,6 +1,6 @@
 import styles from './Product.module.scss';
 import PropTypes from 'prop-types'
-import { useState , useMemo, useEffect} from 'react';
+import { useState } from 'react';
 import ProductImages from './ProductImages/ProductImages';
 import ProductImage from './ProductImage/ProductImage';
 import ProductForm from './ProductForm/ProductForm';
@@ -8,24 +8,37 @@ import ProductForm from './ProductForm/ProductForm';
 
 
 const Product = props => {
-
-  const [currentColor, setCurrentColor] = useState(props.colors[0])
-
-  const [currentSize, setCurrentSize] = useState(props.sizes[0].name)
+  const [currentColor, setCurrentColor] = useState(props.colors[0]);
+  const [currentSize, setCurrentSize] = useState(props.sizes[0].name);
+  // props.setCurrentColor(props.colors[0]);
+  // props.setCurrentSize(props.sizes[0].name);
+  // props.setCurrentColor(props.colors[0]);
+  // props.setCurrentSize(props.sizes[0].name);
  
   const hundleSubmit = (e) => {
     e.preventDefault()
-    console.log('Summary');
+    console.log('PDP Summary');
     console.log('========');
     console.log('Size:', currentSize);
     console.log('Color:', currentColor);
+    console.log('========');
   }
 
   return (
     <div className={styles.product}>
-       <ProductImages id={props.id} setCurrentColor={setCurrentColor} currentColor={currentColor} colors={props.colors}/>
-       <ProductImage id={props.id} currentColor={currentColor}/>
-       <ProductForm data={props}
+      <ProductImages 
+        id={props.id} 
+        availability={props.availability} 
+        setCurrentColor={setCurrentColor} 
+        currentColor={currentColor} 
+        colors={props.colors} />
+
+      <ProductImage 
+        id={props.id} 
+        availability={props.availability} 
+        currentColor={currentColor} />
+
+      <ProductForm data={props}
           hundleSubmit={hundleSubmit}
           currentSize={currentSize}
           setCurrentSize={setCurrentSize}

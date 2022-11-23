@@ -9,14 +9,11 @@ const Products = props => {
   const location = useLocation();
 
   // const [clickedProductId, setCurrentProductId] = React.useState({id:''});
-
+  // props.setCurrentColor(props.colors[0]);
+  // props.setCurrentSize(props.sizes[0].name);
   // React.useEffect(() => {
-  //   console.log('location: ', location.state.from.id);
-
-  //   setCurrentProductId(location.state.from.id)
-  // }, []);
-
-  // console.log('location.state.from: ', location.state.from);
+  // console.log('location: ', location.state.from);
+  
   let product = location.state.from;
 
   return (

@@ -1,6 +1,6 @@
 @import '../../../../styles/settings.scss';
 
-.singleCategory{
+.singleCategory {
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -13,7 +13,7 @@
   // height: 56px;
 }
 
-.categories{ 
+.categories { 
   height: 56px;
   // width: 30%;
   position: relative;
@@ -27,35 +27,40 @@
   // padding: 0px;
 } 
   
-.categories ul{ 
+.categories ul { 
   list-style-type: none; 
   margin: 0; 
   padding: 0; 
   height: 100%;
 } 
 
-.categories li{ 
+.categories li { 
   display: inline-block; 
   position: relative; 
   margin: 0 36px 0 0; 
   height: 100%;
 } 
 
-.categories a{ 
+.singleCategoryButton { 
   font-size: 16px; 
   text-decoration: none; 
-  color: #000;  
-  height: 100%;              
+  border: none;
+  background-color: $color-light;
+  color: $color-dark;
+  height: 80px;
+  cursor: pointer;
+  // border-bottom: 5px solid red;
 }
 
-li a:hover {   
+.singleCategoryButton:hover {   
   border-bottom: 2px solid;
   background: $color-light;
   color: $color-success;
+  border-bottom: 2px solid $color-success;
 }   
 
-.categories ul ul li{ 
+.categories ul ul li { 
   display: block; 
   margin: 0 0 12px 0; 
   display: none;
-} 
+}

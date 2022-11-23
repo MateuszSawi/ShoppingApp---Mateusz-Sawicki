@@ -4,4 +4,28 @@
   height: 100%;
   width: 700px;
   background-color: $color-light;
+  position: relative;
+}
+
+.textOutOfStock {
+  position: absolute;
+  top: 255px;
+  left: 305px;
+  transform: translate(-50%, -50%);
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 160%;
+  color: #8D8F9A;
+}
+
+.textAvailable {
+  font-size: 0px;
+}
+
+.image {
+  opacity: 0.5;
+  // filter: alpha(opacity=50);
 }

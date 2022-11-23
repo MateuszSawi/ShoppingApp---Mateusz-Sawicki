@@ -18,7 +18,7 @@
   font-size: 0px;
 }
 
-.imgDiv {
+.imageContainer {
   position: relative;
   text-align: center;
 }
@@ -26,4 +26,8 @@
 .image {
   opacity: 0.5;
   // filter: alpha(opacity=50);
+}
+
+.button {
+  position: absolute;
 }

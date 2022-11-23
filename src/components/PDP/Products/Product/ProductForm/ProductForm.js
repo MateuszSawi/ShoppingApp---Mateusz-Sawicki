@@ -8,6 +8,7 @@ import Price from "./Price/Price";
 import Description from "./Description/Description";
 
 const ProductForm = props => {
+  // console.log(props);
   return(
     <div className={styles.formContainer}>
       <FormTitle data={props.data}/>
