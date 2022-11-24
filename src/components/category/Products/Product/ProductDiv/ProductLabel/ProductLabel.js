@@ -5,8 +5,8 @@ import ProductPrice from './ProductPrice/ProductPrice';
 const ProductLabel = props => {
   return(
     <div>
-      <ProductName productName={props.name} state={props.state} availability={props.availability}/>
-      <ProductPrice productPrice={props.price} availability={props.availability}/>
+      <ProductName productName={props.name} state={props.state} availability={props.availability} />
+      <ProductPrice currentCurrency={props.currentCurrency} prices={props.prices} availability={props.availability} />
     </div>
   );
 };

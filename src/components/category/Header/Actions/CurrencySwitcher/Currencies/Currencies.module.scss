@@ -1,0 +1,17 @@
+.currenciesDiv {
+  display: inline-block;
+  // display: none;
+  position: relative;
+  top: 90px;
+  transform: translateX(-10%);
+  // border: 1px solid;
+  float: none;
+  z-index: 2;
+}
+
+.currenciesDiv ul {
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+  height: 100%;
+}

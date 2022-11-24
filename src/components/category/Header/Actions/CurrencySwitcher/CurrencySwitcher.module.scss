@@ -20,10 +20,9 @@
   right: 50px;
 }
 
-// .active {
-//   display: none;
-//   height: 1000%;
-// }
+
+// 
+// 
 
 .currenciesDiv {
   display: inline-block;
@@ -43,9 +42,8 @@
   height: 100%;
 }
 
-.buttonDiv:hover {
-  background: $color-success;
-}
+// |
+// v
 
 .buttonClass {
   width: 114px;
@@ -60,6 +58,7 @@
 
 .buttonClass:hover {
   background: #EEEEEE;
+  cursor: pointer;
 }
 
 .currency {

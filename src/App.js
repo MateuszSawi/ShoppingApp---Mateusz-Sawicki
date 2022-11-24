@@ -10,14 +10,15 @@ const App = () => {
 
   const [currentFilter, setCurrentFilter] = useState('ALL');
   const [currentCurrency, setCurrentCurrency] = useState('$');
-
+  const [cartItems, setCartItems] = useState([]);
+  
   return (
     <>
-      <Header currentFilter={currentFilter} setCurrentFilter={setCurrentFilter} />
-      <Container currentFilter={currentFilter} setCurrentFilter={setCurrentFilter} >
+      <Header cartItems={cartItems} setCartItems={setCartItems} currentCurrency={currentCurrency} setCurrentCurrency={setCurrentCurrency} currentFilter={currentFilter} setCurrentFilter={setCurrentFilter}/>
+      <Container>
         <Routes>
-          <Route path="/" element={<Category currentFilter={currentFilter} setCurrentFilter={setCurrentFilter} />} />
-          <Route exact path="/pdp" element={<PDP />} />
+          <Route path="/" element={<Category cartItems={cartItems} setCartItems={setCartItems} currentCurrency={currentCurrency} currentFilter={currentFilter} setCurrentFilter={setCurrentFilter} />} />
+          <Route exact path="/pdp" element={<PDP currentCurrency={currentCurrency} />} />
         </Routes>
       </Container>
     </>

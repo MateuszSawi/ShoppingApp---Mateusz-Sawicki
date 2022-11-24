@@ -1,13 +1,13 @@
 import styles from './Actions.module.scss';
-import Currency from './Currency/Currency';
+import CurrencySwitcher from './CurrencySwitcher/CurrencySwitcher';
 import Cart from './Cart/Cart';
 
-const Actions = () => {
+const Actions = props => {
   return(
     <div className={styles.wrapper}>
-      <Currency />
-      <Cart />
-    </div>   
+      <CurrencySwitcher currentCurrency={props.currentCurrency} setCurrentCurrency={props.setCurrentCurrency} />
+      <Cart cartItems={props.cartItems} setCartItems={props.setCartItems} />
+    </div>
   );
 };
 

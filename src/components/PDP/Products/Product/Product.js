@@ -43,7 +43,8 @@ const Product = props => {
           currentSize={currentSize}
           setCurrentSize={setCurrentSize}
           currentColor={currentColor}
-          setCurrentColor={setCurrentColor} />
+          setCurrentColor={setCurrentColor}
+          currentCurrency={props.currentCurrency} />
     </div>
   )
 };

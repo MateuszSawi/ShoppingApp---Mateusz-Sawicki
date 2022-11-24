@@ -1,9 +1,16 @@
+const euro = 0.96;
+const jpy = 139.61;
+
 const productsData = [
   {
     id: 1,
     name: 'Apollo',
     state: 'Running Short',
-    price: 20.05,
+    prices: [
+      { price: 20.05, symbol: '$' },
+      { price: 20.05 * euro, symbol: '€' },
+      { price: 20.05 * jpy, symbol: '¥' },
+    ],
     colors: ['gray', 'blue', 'green'],
     sizes: [
       { name: 'S'},
@@ -19,7 +26,11 @@ const productsData = [
     id: 2,
     name: 'Nulla',
     state: 'Vivamus Dolor',
-    price: 30.00,
+    prices: [
+      { price: 30.00, symbol: '$' },
+      { price: 30.00 * euro, symbol: '€' },
+      { price: 30.00 * jpy, symbol: '¥' },
+    ],
     colors: ['orange', 'yellow', 'pink'],
     sizes: [
       { name: 'S'},
@@ -35,7 +46,11 @@ const productsData = [
     id: 3,
     name: 'Nullam Accumsan',
     state: 'Interdum Et',
-    price: 25.00,
+    prices: [
+      { price: 25.00, symbol: '$' },
+      { price: 25.00 * euro, symbol: '€' },
+      { price: 25.00 * jpy, symbol: '¥' },
+    ],
     colors: ['gray', 'yellow', 'white'],
     sizes: [
       { name: 'S'},
@@ -51,7 +66,11 @@ const productsData = [
     id: 4,
     name: 'Fusce',
     state: 'Quisque Quis',
-    price: 50.10,
+    prices: [
+      { price: 50.10, symbol: '$' },
+      { price: 50.10  *euro, symbol: '€' },
+      { price: 50.10 * jpy, symbol: '¥' },
+    ],
     colors: ['white', 'green', 'pink'],
     sizes: [
       { name: 'S'},
@@ -67,7 +86,11 @@ const productsData = [
     id: 5,
     name: 'Interdum Et',
     state: 'Sed',
-    price: 20.05,
+    prices: [
+      { price: 20.05, symbol: '$' },
+      { price: 20.05 * euro, symbol: '€' },
+      { price: 20.05 * jpy, symbol: '¥' },
+    ],
     colors: ['gray', 'pink', 'brown'],
     sizes: [
       { name: 'S'},
@@ -83,7 +106,11 @@ const productsData = [
     id: 6,
     name: 'Etiam',
     state: 'Nunc Porttitor',
-    price: 47.90,
+    prices: [
+      { price: 47.90, symbol: '$' },
+      { price: 47.90 * euro, symbol: '€' },
+      { price: 47.90 * jpy, symbol: '¥' },
+    ],
     colors: ['gray', 'blue', 'pink'],
     sizes: [
       { name: 'S'},

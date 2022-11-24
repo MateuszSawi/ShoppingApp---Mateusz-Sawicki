@@ -13,20 +13,20 @@ const Products = props => {
   // props.setCurrentSize(props.sizes[0].name);
   // React.useEffect(() => {
   // console.log('location: ', location.state.from);
-  
   let product = location.state.from;
-
+  // console.log('PPPPPP: ', product.prices);
   return (
     <section className={styles.sectionProducts}>
       <Product 
         id={product.id}
         name={product.name}
         state={product.state}
-        price={product.price}
+        prices={product.prices}
         sizes={product.sizes}
         colors={product.colors}
         availability={product.availability}
-        description={product.description} />
+        description={product.description}
+        currentCurrency={props.currentCurrency} />
     </section>
   );
 };

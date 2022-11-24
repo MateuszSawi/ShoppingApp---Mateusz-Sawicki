@@ -6,7 +6,8 @@ import clsx from 'clsx';
 
 const Products = props => {
   const [products]  = useState(productsData);
-  // console.log('props.currentFilter:', props.currentFilter);
+  console.log('cartItems:', props.cartItems);
+
   return (
     <section className={styles.sectionProducts}>
       {products.map(product => 
@@ -15,14 +16,17 @@ const Products = props => {
           id={product.id}
           name={product.name}
           state={product.state}
-          price={product.price}
+          prices={product.prices}
           sizes={product.sizes}
           colors={product.colors}
           availability={product.availability}
           category={product.category}
           description={product.description}
           currentFilter={props.currentFilter} 
-          setCurrentFilter={props.setCurrentFilter} />
+          setCurrentFilter={props.setCurrentFilter}
+          currentCurrency={props.currentCurrency} 
+          cartItems={props.cartItems} 
+          setCartItems={props.setCartItems} />
       )}
     </section>
   );

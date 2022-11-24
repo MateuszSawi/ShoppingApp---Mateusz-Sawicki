@@ -9,7 +9,7 @@ const Category = props => {
     <Container>
       {/* <Header /> */}
       <Title />
-      <Products currentFilter={props.currentFilter} setCurrentFilter={props.setCurrentFilter} />
+      <Products cartItems={props.cartItems} setCartItems={props.setCartItems} currentCurrency={props.currentCurrency} currentFilter={props.currentFilter} setCurrentFilter={props.setCurrentFilter} />
     </Container>
     
   );

@@ -3,7 +3,7 @@ import Products from './components/PDP/Products/Products';
 const PDP = props => {
 
   return (
-      <Products />
+      <Products currentCurrency={props.currentCurrency} />
   );
 };
 

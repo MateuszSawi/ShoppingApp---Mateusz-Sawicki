@@ -17,9 +17,9 @@ const ProductForm = props => {
 
         <OptionColor data={props.data} currentColor={props.currentColor} setCurrentColor={props.setCurrentColor} />
 
-        <Price data={props.data} />
+        <Price data={props.data} currentCurrency={props.currentCurrency} />
           
-        <CartButton data={props.data}/>
+        <CartButton data={props.data} />
         <Description data={props.data}/>
       </form>
     </div>

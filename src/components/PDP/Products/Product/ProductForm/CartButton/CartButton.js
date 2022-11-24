@@ -6,11 +6,3 @@ const CartButton = (props) => {
 };
 
 export default CartButton;
-
-
-{/* <CartButton >
-    <span className="fa fa-shopping-cart" />
-</CartButton>
-
-
-return (<button className={clsx(styles.button, props.className)}>{props.children}</button>); */}

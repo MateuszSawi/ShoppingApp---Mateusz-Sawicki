@@ -2,11 +2,21 @@ import styles from './Price.module.scss';
 import clsx from 'clsx';
 
 const Price = (props) => {
-  // console.log(props.data.price);
+  console.log(props.currentCurrency);
+
+  let price;
+  if (props.currentCurrency === '$') {
+    price = (Math.round(props.data.prices[0].price * 100) / 100).toFixed(2);
+  } else if (props.currentCurrency === '€') {
+    price = (Math.round(props.data.prices[1].price * 100) / 100).toFixed(2);
+  } else if (props.currentCurrency === '¥') {
+    price = (Math.round(props.data.prices[2].price * 100) / 100).toFixed(2);
+  }
+
     return (
       <div className={styles.price}>
         <h2>Price: </h2>
-        <p>${props.data.price}</p>
+        <p>{props.currentCurrency}{price}</p>
       </div>
     );
 };

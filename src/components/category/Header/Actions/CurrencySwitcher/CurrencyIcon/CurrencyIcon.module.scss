@@ -1,0 +1,34 @@
+@import '../../../../../../styles/settings.scss';
+
+.currencyContainer {
+  display: inline-block; 
+  // position: relative;
+  position: absolute;
+  align-items: center;
+  padding: 0px;
+  gap: 22px;
+  height: auto;
+  width: 45px;
+  overflow: visible;
+  right: 50px;
+  cursor: pointer;
+}
+
+.currencyIcon {
+  display: inline-block;
+  border: none;
+  background-color: $color-light;
+  cursor: pointer;
+  top: 50%;
+  position: relative;
+}
+
+.togglingIcon {
+  display: inline-block;
+  height: 100%;
+  cursor: pointer;
+  background-color: $color-light;
+  top: 50%;
+  position: relative;
+  transform: translate(90%, -120%);
+}

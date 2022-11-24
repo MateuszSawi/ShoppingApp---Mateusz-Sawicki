@@ -1,0 +1,21 @@
+@import '../../../../../../../styles/settings.scss';
+
+.buttonClass {
+  width: 114px;
+  height: 45px;
+  border: none;
+  background-color: $color-light;
+}
+
+.buttonClass img {
+  transform: translateX(40%);
+}
+
+.buttonClass:hover {
+  background: #EEEEEE;
+  cursor: pointer;
+}
+
+.currency {
+  display: flex;
+}

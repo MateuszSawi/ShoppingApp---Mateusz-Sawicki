@@ -1,18 +1,16 @@
-import ProductImage from './ProductImage/ProductImage';
-import ProductLabel from './ProductLabel/ProductLabel';
+// import ProductImage from './ProductImage/ProductImage';
+import LinkProduct from './LinkProduct/LinkProduct';
 import styles from './ProductDiv.module.scss';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const ProductDiv = props => {
-  
   const currentSize = props.sizes[0].name;
   const currentColor = props.colors[0];
 
-  // console.log('currentSize: ', currentSize);
-  // console.log('currentColor: ', currentColor);
+  // console.log('cartItems:', props.cartItems);
 
   const hundleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     console.log('Category Summary');
     console.log('========');
     console.log('Size:', currentSize);
@@ -20,19 +18,52 @@ const ProductDiv = props => {
     console.log('========');
   }
 
-  // console.log('propu:', props);
+  const onAdd = (e) => {
+    e.preventDefault();
+    const exist = props.cartItems.some(element => {
+      if (element.props.name === props.name && 
+          element.props.state === props.state &&
+          element.props.currentSize === props.currentSize && 
+          element.props.currentColor === props.currentColor
+      ) {
+        return true;
+      }
+      return false;
+    });
+    console.log('exist', exist);
+    if (!exist) {
+      props.setCartItems(current => [...current, {props , qty: 1}]);
+    } else if (exist) {
+      const searchingElement = (element) => element.props.name === props.name && 
+      element.props.state === props.state &&
+      element.props.currentSize === props.currentSize && 
+      element.props.currentColor === props.currentColor;
+      
+      const index = props.cartItems.findIndex(searchingElement);
+      // console.log('index: ', index);
+      // console.log(props.cartItems[index].qty);
+      props.cartItems[index].qty += 1;
+      // console.log('NOW',props.cartItems);
+    }
+  };
+
   return (
     <div className={styles.container}>
-      <Link to="/pdp" state={{from: props}}>
-        <div className={styles.productDiv}>
-          <ProductImage id={props.id} availability={props.availability}/>
-          
-          <ProductLabel name={props.name} state={props.state} price={props.price} availability={props.availability} />
-        </div>
-      </Link>
-      <form onSubmit={hundleSubmit}>
-        <button className={styles.button}>
-          <img className={styles.buttonIcon}
+      <LinkProduct id={props.id}
+        name={props.name}
+        state={props.state}
+        prices={props.prices}
+        sizes={props.sizes}
+        colors={props.colors}
+        availability={props.availability}
+        category={props.category}
+        description={props.description}
+        currentSize={props.currentSize}
+        currentColor={props.currentColor}
+        currentCurrency={props.currentCurrency} />
+      <form>
+        <button className={styles.button} onClick={onAdd} >
+          <img className={styles.buttonIcon} 
             alt={props.name}
             src={`${process.env.PUBLIC_URL}/Vector.png`} />
         </button>
@@ -51,3 +82,5 @@ export default ProductDiv;
 //   pathname: "/pdp/id",
 //   id: '2'
 // }}>
+
+//<form onSubmit={hundleSubmit}>
