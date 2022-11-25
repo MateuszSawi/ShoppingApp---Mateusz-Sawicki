@@ -11,10 +11,13 @@ const App = () => {
   const [currentFilter, setCurrentFilter] = useState('ALL');
   const [currentCurrency, setCurrentCurrency] = useState('$');
   const [cartItems, setCartItems] = useState([]);
+  const [finalCart, setFinalCart] = useState([]);
+  // const [currentColor, setCurrentColor] = useState('');
+  // const [currentSize, setCurrentSize] = useState('');
   
   return (
     <>
-      <Header cartItems={cartItems} setCartItems={setCartItems} currentCurrency={currentCurrency} setCurrentCurrency={setCurrentCurrency} currentFilter={currentFilter} setCurrentFilter={setCurrentFilter}/>
+      <Header finalCart={finalCart} setFinalCart={setFinalCart} cartItems={cartItems} setCartItems={setCartItems} currentCurrency={currentCurrency} setCurrentCurrency={setCurrentCurrency} currentFilter={currentFilter} setCurrentFilter={setCurrentFilter}/>
       <Container>
         <Routes>
           <Route path="/" element={<Category cartItems={cartItems} setCartItems={setCartItems} currentCurrency={currentCurrency} currentFilter={currentFilter} setCurrentFilter={setCurrentFilter} />} />

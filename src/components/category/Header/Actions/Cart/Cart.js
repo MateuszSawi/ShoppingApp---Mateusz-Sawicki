@@ -1,6 +1,50 @@
 import styles from './Cart.module.scss';
+import CartProduct from './CartProduct/CartProduct';
+import { useState, useEffect} from 'react';
 
-const Cart = () => {
+const Cart = props => {
+
+  const [totalItems, setTotalItems] = useState([]);  
+  const [myNumArr, setMyNumArr] = useState([]);
+
+  const [final, setFinal] = useState(0);  
+
+  let xd = 0;
+
+  const items = [];
+  console.log('items', items);
+  console.log('XDDDDDDDDDDDD', xd);
+  console.log('FINAL', myNumArr);
+
+  let tempQty = 0;
+
+  // const searchingElement = (element) => element.name === props.name && 
+  //     element.state === props.state &&
+  //     element.currentSize === props.currentSize && 
+  //     element.currentColor === props.currentColor;
+  // const index = props.cartItems.findIndex(searchingElement);
+
+  console.log('props.finalCart: ', props.cartItems);
+
+  // props.cartItems.map(element => {
+  //   if(element.name === props.cartItems.name && 
+  //     element.state === props.cartItems.state &&
+  //     element.currentSize === props.cartItems.currentSize && 
+  //     element.currentColor === props.cartItems.currentColor)
+  //       {
+          
+  //         console.log('index', props.cartItems.name);
+  //         // const searchingElement = (element) => element.name === props.name && 
+  //         // element.state === props.state &&
+  //         // element.currentSize === props.currentSize && 
+  //         // element.currentColor === props.currentColor;
+  //         // const index = props.cartItem.findIndex(searchingElement);
+  //         // console.log('index', index);
+  //       } else {
+  //         console.log('index', props)
+  //       }
+  // })
+  // console.log('index: ', index);
   return(
     <>
     <div className={styles.cartIconContainer}>
@@ -16,11 +60,49 @@ const Cart = () => {
       <div className={styles.cartFrame}>
         <div className={styles.cartBanner}>
           <h1>My Bag,</h1>
-          <p>items</p>
+          <p>{totalItems}items</p>
         </div>
 
         <div className={styles.cartProducts}>
+          {props.cartItems.map((cartItem) => (
+            <CartProduct 
+              xd={xd}
+              final={final}
+              setFinal={setFinal}
 
+              myNumArr={myNumArr}
+              setMyNumArr={setMyNumArr}
+
+              items={items}
+              tempQty={tempQty}
+              key={cartItem.name} 
+              cartItem={cartItem}
+              // finalQuantity={finalQuantity}
+              name={cartItem.name}
+              state={cartItem.state}
+              id={cartItem.id}
+
+              totalItems={totalItems}
+              setTotalItems={setTotalItems}
+              // totalPrice={totalPrice}
+              // setTotalPrice={setTotalPrice}
+              prices={cartItem.prices}
+              setCartItems={props.setCartItems}
+
+              currentColor={cartItem.currentColor}
+              currentSize={cartItem.currentSize}
+
+              // setCurrentColor={cartItem.setCurrentColor}
+              // setCurrentSize={cartItem.setCurrentSize}
+
+              finalCart={props.finalCart} 
+              setFinalCart={props.setFinalCart}
+
+              currentCurrency={props.currentCurrency}
+              sizes={cartItem.sizes} 
+              colors={cartItem.colors}
+              quantity={cartItem.quantity} />
+          ))}
           
         </div>
 
@@ -30,7 +112,7 @@ const Cart = () => {
           </div>
             
           <div className={styles.cartTotalRightText}>
-            <p>items</p>
+            <p>{props.currentCurrency}</p>
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ const Header = props => {
         <div className={styles.header}>
             <CategoryFilter currentFilter={props.currentFilter} setCurrentFilter={props.setCurrentFilter} />
             <Icon />
-            <Actions cartItems={props.cartItems} setCartItems={props.setCartItems} currentCurrency={props.currentCurrency} setCurrentCurrency={props.setCurrentCurrency} />
+            <Actions finalCart={props.finalCart} setFinalCart={props.setFinalCart} cartItems={props.cartItems} setCartItems={props.setCartItems} currentCurrency={props.currentCurrency} setCurrentCurrency={props.setCurrentCurrency} />
         </div>
     );
 };

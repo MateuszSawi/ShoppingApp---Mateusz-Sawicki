@@ -10,14 +10,17 @@ import ProductForm from './ProductForm/ProductForm';
 const Product = props => {
   const [currentColor, setCurrentColor] = useState(props.colors[0]);
   const [currentSize, setCurrentSize] = useState(props.sizes[0].name);
-  // props.setCurrentColor(props.colors[0]);
+
+  // let currentColor = props.colors[0];
+  
   // props.setCurrentSize(props.sizes[0].name);
   // props.setCurrentColor(props.colors[0]);
   // props.setCurrentSize(props.sizes[0].name);
  
+  // props.currentColor = props.colors[0];
+
   const hundleSubmit = (e) => {
-    e.preventDefault()
-    console.log('PDP Summary');
+    e.preventDefault();
     console.log('========');
     console.log('Size:', currentSize);
     console.log('Color:', currentColor);
@@ -30,7 +33,7 @@ const Product = props => {
         id={props.id} 
         availability={props.availability} 
         setCurrentColor={setCurrentColor} 
-        currentColor={currentColor} 
+        currentColor={currentColor}
         colors={props.colors} />
 
       <ProductImage 

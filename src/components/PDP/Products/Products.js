@@ -7,13 +7,13 @@ import { useLocation, useParams } from 'react-router-dom'
 
 const Products = props => {
   const location = useLocation();
-
+  let product = location.state.from;
   // const [clickedProductId, setCurrentProductId] = React.useState({id:''});
   // props.setCurrentColor(props.colors[0]);
   // props.setCurrentSize(props.sizes[0].name);
   // React.useEffect(() => {
   // console.log('location: ', location.state.from);
-  let product = location.state.from;
+  
   // console.log('PPPPPP: ', product.prices);
   return (
     <section className={styles.sectionProducts}>
@@ -26,7 +26,10 @@ const Products = props => {
         colors={product.colors}
         availability={product.availability}
         description={product.description}
-        currentCurrency={props.currentCurrency} />
+        currentCurrency={props.currentCurrency}
+        // setCurrentColor={props.setCurrentColor}
+        // currentColor={props.currentColor} 
+      />
     </section>
   );
 };

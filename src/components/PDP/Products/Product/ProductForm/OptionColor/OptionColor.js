@@ -7,7 +7,13 @@ const OptionColor = props => {
   const prepareColorClassName = color => {
     return styles[color + 'Color'] 
   };
+  // let color = props.data.colors[0]
+  // let current = props.data.colors[0];
+  // props.currentColor = current;
+  // props.setCurrentColor(props.data.colors[0]);
 
+  // console.log('props.data.currentColor: ', props.currentColor);
+  // console.log('props.data.colors[0]: ', props.data.colors[0]);
   // console.log('optionColor: ', props.data.colors, props.currentColor, prepareColorClassName('blue'));
   return (
     <div className={styles.colors}>
@@ -20,7 +26,7 @@ const OptionColor = props => {
               </li>
             )}
         </ul>
-  </div>
+    </div>
    
   )
 }

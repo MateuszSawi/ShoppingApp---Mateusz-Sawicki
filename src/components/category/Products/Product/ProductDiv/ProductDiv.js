@@ -1,49 +1,64 @@
-// import ProductImage from './ProductImage/ProductImage';
 import LinkProduct from './LinkProduct/LinkProduct';
 import styles from './ProductDiv.module.scss';
-// import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const ProductDiv = props => {
   const currentSize = props.sizes[0].name;
   const currentColor = props.colors[0];
 
-  // console.log('cartItems:', props.cartItems);
+  // const [currentColor] = useState(props.colors[0]);
+  console.log('FIRST: ', props.cartItems);
 
-  const hundleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Category Summary');
-    console.log('========');
-    console.log('Size:', currentSize);
-    console.log('Color:', currentColor);
-    console.log('========');
-  }
+  // const name = props.name;
+  // const state = props.state;
+  // const currentCurrency = props.currentCurrency;
+  // const sizes = props.sizes;
+  // const colors = props.colors;
+  // const prices = props.prices;
+  // const id = props.id;
+  let quantity = 1;
 
   const onAdd = (e) => {
     e.preventDefault();
+    // window.location.reload(false);
     const exist = props.cartItems.some(element => {
-      if (element.props.name === props.name && 
-          element.props.state === props.state &&
-          element.props.currentSize === props.currentSize && 
-          element.props.currentColor === props.currentColor
+      // console.log('element.currentSize: ', element.currentSize);
+      // console.log('element.currentSize: ', name);
+      if (element.name === props.name && 
+          element.state === props.state &&
+          element.currentSize === currentSize && 
+          element.currentColor === currentColor
       ) {
         return true;
       }
+      
       return false;
     });
-    console.log('exist', exist);
-    if (!exist) {
-      props.setCartItems(current => [...current, {props , qty: 1}]);
-    } else if (exist) {
-      const searchingElement = (element) => element.props.name === props.name && 
-      element.props.state === props.state &&
-      element.props.currentSize === props.currentSize && 
-      element.props.currentColor === props.currentColor;
+    // console.log('exist', exist);
+    if (!exist && props.availability === 'available') { 
       
+      props.setCartItems(current => [...current, {
+        name : props.name, 
+        state : props.state, 
+        id : props.id, 
+        currentColor : currentColor, 
+        currentSize : currentSize, 
+        prices : props.prices, 
+        sizes : props.sizes, 
+        colors : props.colors, 
+        // setCurrentColor: setCurrentColor,
+        quantity : quantity}]);
+    } else if (exist) {
+      const searchingElement = (element) => element.name === props.name && 
+      element.state === props.state &&
+      element.currentSize === currentSize && 
+      element.currentColor === currentColor;
+
       const index = props.cartItems.findIndex(searchingElement);
-      // console.log('index: ', index);
-      // console.log(props.cartItems[index].qty);
-      props.cartItems[index].qty += 1;
-      // console.log('NOW',props.cartItems);
+      props.cartItems[index].quantity += 1;
+      
+      // console.log('HHHHHH', props.cartItems[index].quantity);
+      props.setCartItems(current => [...current,]);
     }
   };
 
@@ -58,8 +73,9 @@ const ProductDiv = props => {
         availability={props.availability}
         category={props.category}
         description={props.description}
-        currentSize={props.currentSize}
-        currentColor={props.currentColor}
+        currentSize={currentSize} //props
+        currentColor={currentColor}
+        // setCurrentColor={setCurrentColor}
         currentCurrency={props.currentCurrency} />
       <form>
         <button className={styles.button} onClick={onAdd} >
@@ -74,7 +90,7 @@ const ProductDiv = props => {
 
 export default ProductDiv;
 
-
+// onClick={onAdd}
 // to="/pdp/:id"
 
 

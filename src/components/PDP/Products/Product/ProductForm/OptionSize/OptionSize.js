@@ -17,7 +17,7 @@ const OptionSize = props => {
       )}
       
     </ul>
-</div>
+  </div>
  ) 
 }
 
