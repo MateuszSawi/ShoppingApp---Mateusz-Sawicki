@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 
 const CartProduct = props => {
 
+  console.log('CartProduct - props: ', props.cartItem.quantity);
+
   const [tempQuantity, setTempQuantity] = useState(0);
 
   const IncreaseQuantity = (e) => {
@@ -35,20 +37,12 @@ const CartProduct = props => {
   const [currentColorCart, setCurrentColorCart] = useState(props.currentColor);
   const [currentSizeCart, setCurrentSizeCart] = useState(props.currentSize);
 
-  // console.log('currentColor: ', currentColorCart);
-  // console.log('currentSize: ', props.currentSize, currentSizeCart);
-
   const prepareColorClassName = color => {
     return styles[color + 'Color'] 
   };
 
-  // console.log('props: ', props);
-  // console.log('currentColorCart: ', currentColorCart);
-
   function setColor(color) {
     setCurrentColorCart(color);
-    // props.currentColor=color;
-    // console.log('currentColor: ', props);
     props.setCartItems(current => [...current,]);
   }
 
@@ -58,62 +52,21 @@ const CartProduct = props => {
     props.setCartItems(current => [...current,]);
   }
 
-  // function updateState() {
-  //   props.setCartItems(current => [...current,]);
-  // }
-
   if(finalQuantity === 0) {
-    console.log('finalQuantity: ', finalQuantity);
+    // console.log('finalQuantity: ', finalQuantity);
   }
 
   
   props.items.push(finalQuantity);
 
   const Arr = [...props.totalItems];
-  // props.setTotalItems(... finalQuantity);
   Arr.push(finalQuantity);
-  console.log('props.items: ', props.items, props.items[props.items.length-1]);
+  // console.log('props.items: ', props.items, props.items[props.items.length-1]);
   let myNum = props.items[props.items.length-1];
-  console.log('GFHJFJF: ', myNum, Arr);
+  // console.log('GFHJFJF: ', myNum, Arr);
 
 
-  props.setMyNumArr(current => [...current,]);
-
-
-  // let g = props.xd + myNum + props.final;
-
-  // props.setFinal(g); 
-
-  // console.log('LOL', props.xd + myNum, props.final);
-  // props.xd = myNum;
-
-  // let tempItems;
-
-  // tempItems = tempItems + finalQuantity;
-
-  //  props.tempQty = finalQuantity;
-
-  // ========================================================================================================
-
-  // props.totalItems.push(finalQuantity);
-
-  // console.log('GFHJFJF: ', tempItems);
-
-  // const name = props.name;
-  // const state = props.state;
-  // const currentCurrency = props.currentCurrency;
-  // const sizes = props.sizes;
-  // const colors = props.colors;
-  // const prices = props.prices;
-  // const id = props.id;
-
-  // const obj = {
-  //   name: name
-  // }
-  // props.setFinalCart(finalQuantity);
-  // props.setFinalCart(current=>[...current, finalQuantity]);
-
-  // console.log('GFHJFJF: ', props.finalCart);
+  // props.setMyNumArr(current => [...current,]);
 
   return(
     <div className={clsx(styles.ProductContainer, finalQuantity === 0 && styles.remove)}>

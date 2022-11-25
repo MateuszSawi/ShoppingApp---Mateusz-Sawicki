@@ -12,39 +12,10 @@ const Cart = props => {
   let xd = 0;
 
   const items = [];
-  console.log('items', items);
-  console.log('XDDDDDDDDDDDD', xd);
-  console.log('FINAL', myNumArr);
+  console.log('Cart - props.cartItems', props.cartItems);
 
   let tempQty = 0;
 
-  // const searchingElement = (element) => element.name === props.name && 
-  //     element.state === props.state &&
-  //     element.currentSize === props.currentSize && 
-  //     element.currentColor === props.currentColor;
-  // const index = props.cartItems.findIndex(searchingElement);
-
-  console.log('props.finalCart: ', props.cartItems);
-
-  // props.cartItems.map(element => {
-  //   if(element.name === props.cartItems.name && 
-  //     element.state === props.cartItems.state &&
-  //     element.currentSize === props.cartItems.currentSize && 
-  //     element.currentColor === props.cartItems.currentColor)
-  //       {
-          
-  //         console.log('index', props.cartItems.name);
-  //         // const searchingElement = (element) => element.name === props.name && 
-  //         // element.state === props.state &&
-  //         // element.currentSize === props.currentSize && 
-  //         // element.currentColor === props.currentColor;
-  //         // const index = props.cartItem.findIndex(searchingElement);
-  //         // console.log('index', index);
-  //       } else {
-  //         console.log('index', props)
-  //       }
-  // })
-  // console.log('index: ', index);
   return(
     <>
     <div className={styles.cartIconContainer}>

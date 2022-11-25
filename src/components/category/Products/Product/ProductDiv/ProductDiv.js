@@ -6,8 +6,7 @@ const ProductDiv = props => {
   const currentSize = props.sizes[0].name;
   const currentColor = props.colors[0];
 
-  // const [currentColor] = useState(props.colors[0]);
-  console.log('FIRST: ', props.cartItems);
+  console.log('ProductDiv - props.cartItems: ', props.cartItems);
 
   // const name = props.name;
   // const state = props.state;
@@ -20,10 +19,7 @@ const ProductDiv = props => {
 
   const onAdd = (e) => {
     e.preventDefault();
-    // window.location.reload(false);
     const exist = props.cartItems.some(element => {
-      // console.log('element.currentSize: ', element.currentSize);
-      // console.log('element.currentSize: ', name);
       if (element.name === props.name && 
           element.state === props.state &&
           element.currentSize === currentSize && 
@@ -34,7 +30,6 @@ const ProductDiv = props => {
       
       return false;
     });
-    // console.log('exist', exist);
     if (!exist && props.availability === 'available') { 
       
       props.setCartItems(current => [...current, {
@@ -46,7 +41,6 @@ const ProductDiv = props => {
         prices : props.prices, 
         sizes : props.sizes, 
         colors : props.colors, 
-        // setCurrentColor: setCurrentColor,
         quantity : quantity}]);
     } else if (exist) {
       const searchingElement = (element) => element.name === props.name && 
@@ -57,7 +51,6 @@ const ProductDiv = props => {
       const index = props.cartItems.findIndex(searchingElement);
       props.cartItems[index].quantity += 1;
       
-      // console.log('HHHHHH', props.cartItems[index].quantity);
       props.setCartItems(current => [...current,]);
     }
   };
@@ -73,9 +66,8 @@ const ProductDiv = props => {
         availability={props.availability}
         category={props.category}
         description={props.description}
-        currentSize={currentSize} //props
+        currentSize={currentSize}
         currentColor={currentColor}
-        // setCurrentColor={setCurrentColor}
         currentCurrency={props.currentCurrency} />
       <form>
         <button className={styles.button} onClick={onAdd} >
