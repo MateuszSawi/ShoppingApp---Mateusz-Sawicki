@@ -1,0 +1,27 @@
+@import '../../../../../styles/settings.scss';
+
+.productName{
+  cursor: default;
+}
+
+.productName h1 {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  color: $color-dark;
+}
+
+.productName h2 {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  color: $color-dark;
+}

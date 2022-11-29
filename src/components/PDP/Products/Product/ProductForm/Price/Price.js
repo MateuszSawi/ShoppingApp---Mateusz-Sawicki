@@ -1,8 +1,6 @@
 import styles from './Price.module.scss';
-import clsx from 'clsx';
 
 const Price = (props) => {
-  console.log(props.currentCurrency);
 
   let price;
   if (props.currentCurrency === '$') {
@@ -13,12 +11,12 @@ const Price = (props) => {
     price = (Math.round(props.data.prices[2].price * 100) / 100).toFixed(2);
   }
 
-    return (
-      <div className={styles.price}>
-        <h2>Price: </h2>
-        <p>{props.currentCurrency}{price}</p>
-      </div>
-    );
+  return (
+    <div className={styles.price}>
+      <h2>Price: </h2>
+      <p>{props.currentCurrency}{price}</p>
+    </div>
+  );
 };
 
 export default Price;

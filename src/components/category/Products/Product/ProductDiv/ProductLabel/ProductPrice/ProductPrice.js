@@ -1,6 +1,5 @@
 import styles from "./ProductPrice.module.scss";
 import clsx from 'clsx';
-// import productsData from '../../../../../../../data/products';
 
 const ProductPrice = props => {
 

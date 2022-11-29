@@ -9,7 +9,7 @@ const ProductImages = props => {
         src={`${process.env.PUBLIC_URL}/images/products/${props.id}/${props.id}small${color}.png`} 
         onClick={e => props.setCurrentColor(color)} />)}
     </div>
-  )
-}
+  );
+};
 
 export default ProductImages;

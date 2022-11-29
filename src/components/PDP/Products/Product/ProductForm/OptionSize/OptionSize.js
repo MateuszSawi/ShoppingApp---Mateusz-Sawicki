@@ -2,7 +2,6 @@ import styles from './OptionSize.module.scss'
 import clsx from 'clsx';
 import PropTypes from 'prop-types'
 
-
 const OptionSize = props => {
   
  return (
@@ -15,16 +14,15 @@ const OptionSize = props => {
             onClick={e => props.setCurrentSize(size.name)}>{size.name}</button>
         </li>  
       )}
-      
     </ul>
   </div>
- ) 
-}
+ );
+};
 
 OptionSize.propTypes = {
   currentSize: PropTypes.string,
   data: PropTypes.object,
   setCurrentSize: PropTypes.func
-}
+};
 
 export default OptionSize;

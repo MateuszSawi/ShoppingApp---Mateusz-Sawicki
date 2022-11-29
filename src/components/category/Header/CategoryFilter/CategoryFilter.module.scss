@@ -9,22 +9,17 @@
   align-items: center;
   padding: 0px;
   height: 100%;  
-  // width: 234px;
-  // height: 56px;
 }
 
 .categories { 
   height: 56px;
-  // width: 30%;
   position: relative;
   padding: 12px 0 0 0;
   left: 101px;
   bottom: 0px;
-
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  // padding: 0px;
 } 
   
 .categories ul { 
@@ -49,7 +44,6 @@
   color: $color-dark;
   height: 80px;
   cursor: pointer;
-  // border-bottom: 5px solid red;
 }
 
 .singleCategoryButton:hover {   

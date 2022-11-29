@@ -1,21 +1,22 @@
 import LinkProduct from './LinkProduct/LinkProduct';
 import styles from './ProductDiv.module.scss';
-import { useState } from 'react';
 
 const ProductDiv = props => {
   const currentSize = props.sizes[0].name;
   const currentColor = props.colors[0];
 
-  console.log('ProductDiv - props.cartItems: ', props.cartItems);
+  let productPrice;
+  if (props.currentCurrency === '$') {
+    productPrice = (Math.round(props.prices[0].price * 100) / 100).toFixed(2);
+  } else if (props.currentCurrency === '€') {
+    productPrice = (Math.round(props.prices[1].price * 100) / 100).toFixed(2);
+  } else if (props.currentCurrency === '¥') {
+    productPrice = (Math.round(props.prices[2].price * 100) / 100).toFixed(2);
+  }
 
-  // const name = props.name;
-  // const state = props.state;
-  // const currentCurrency = props.currentCurrency;
-  // const sizes = props.sizes;
-  // const colors = props.colors;
-  // const prices = props.prices;
-  // const id = props.id;
   let quantity = 1;
+  let totalPrice;
+  let uniqueIndex = 0;
 
   const onAdd = (e) => {
     e.preventDefault();
@@ -27,12 +28,16 @@ const ProductDiv = props => {
       ) {
         return true;
       }
-      
+      uniqueIndex += 1;
       return false;
     });
     if (!exist && props.availability === 'available') { 
+
+      uniqueIndex += 1;
       
       props.setCartItems(current => [...current, {
+        productPrice : productPrice,
+        uniqueIndex : uniqueIndex,
         name : props.name, 
         state : props.state, 
         id : props.id, 
@@ -41,7 +46,10 @@ const ProductDiv = props => {
         prices : props.prices, 
         sizes : props.sizes, 
         colors : props.colors, 
-        quantity : quantity}]);
+        quantity : quantity,
+        totalPrice: totalPrice
+      }]);
+
     } else if (exist) {
       const searchingElement = (element) => element.name === props.name && 
       element.state === props.state &&
@@ -81,14 +89,3 @@ const ProductDiv = props => {
 };
 
 export default ProductDiv;
-
-// onClick={onAdd}
-// to="/pdp/:id"
-
-
-// onClick={e => console.log(props.name, props.id)} to={{
-//   pathname: "/pdp/id",
-//   id: '2'
-// }}>
-
-//<form onSubmit={hundleSubmit}>

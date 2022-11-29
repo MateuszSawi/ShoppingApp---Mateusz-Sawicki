@@ -1,0 +1,58 @@
+@use 'sass:math';
+@import '../../../../styles/settings.scss';
+
+.qtyButtons {
+  width: 70px;
+  height: 280px;
+  align-items: center;
+  margin: 0;
+  margin-right: 0;
+  position: relative;
+  text-align: center;
+}
+
+.qtyButtons button {
+  box-sizing: border-box;
+  background-color: $color-light;
+  width: 45px;
+  height: 45px;
+  border: 1px solid $color-dark;
+}
+
+.qtyPlus {
+  margin-left: 18%;
+  width: 45px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.qtyPlus:hover {
+  filter: brightness(90%);
+}
+
+.qty {
+  height: 52%;
+  transform: translateY(30%);
+  align-items: center;
+  cursor: default;
+}
+
+.quantity {
+  margin-top: 60%;
+}
+
+.qtyMinus {
+  margin-left: 18%;
+  width: 45px;
+  top: 50%;
+  transform: translateY(5%);
+  align-items: center;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.qtyMinus:hover {
+  filter: brightness(90%);
+}

@@ -1,4 +1,3 @@
-// import styles from './CurrencySwitcher.module.scss';
 import CurrencyIcon from './CurrencyIcon/CurrencyIcon';
 import Currencies from './Currencies/Currencies';
 import React, { useState } from "react";

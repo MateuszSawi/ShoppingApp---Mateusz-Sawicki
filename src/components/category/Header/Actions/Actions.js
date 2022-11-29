@@ -6,7 +6,7 @@ const Actions = props => {
   return(
     <div className={styles.wrapper}>
       <CurrencySwitcher currentCurrency={props.currentCurrency} setCurrentCurrency={props.setCurrentCurrency} />
-      <Cart finalCart={props.finalCart} setFinalCart={props.setFinalCart} cartItems={props.cartItems} setCartItems={props.setCartItems} currentCurrency={props.currentCurrency} />
+      <Cart cartItems={props.cartItems} setCartItems={props.setCartItems} currentCurrency={props.currentCurrency} />
     </div>
   );
 };

@@ -2,6 +2,7 @@
 
 .container {
   position: relative;
+  z-index: 2;
 }
 
 .container:hover .button {
@@ -15,7 +16,6 @@
   border: 20px solid;
   border-color: $color-light;
   position: relative;
-  // text-decoration: none;
 }
 
 .productDiv:hover {
@@ -35,11 +35,6 @@ a:link {
   bottom: 70px;
   border-radius: 50%;
   border: none;
-  background-color: #5ECE7B;
   display: none;
+  background: #5ECE7B;
 }
-
-// .productDiv:hover .button {
-//   display: block;
-//   cursor: pointer;
-// }

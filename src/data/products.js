@@ -125,13 +125,3 @@ const productsData = [
 ];
 
 export default productsData;
-
-
-
-
-// sizes: [
-//   { name: 'S', additionalPrice: 0 },
-//   { name: 'M', additionalPrice: 2 },
-//   { name: 'L', additionalPrice: 3 },
-//   { name: 'XL', additionalPrice: 4 }
-// ],

@@ -1,0 +1,50 @@
+@import '../../../../../../styles/settings.scss';
+
+.cartIconContainer {
+  display: inline-block; 
+  position: absolute; 
+  align-items: center;
+  padding: 0px;
+}
+
+.cartIcon {
+  border: none;
+  background-color: $color-light;
+  position: absolute;
+  left: -20px;
+  top: -6px;
+  cursor: pointer;
+}
+
+.showCartIconQuantity {
+  background-color: $color-dark;
+  color: $color-light;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  position: relative;
+  bottom: 35px;
+  right: 15px;
+}
+
+.dontShowCartIconQuantity {
+  background-color: $color-dark;
+  color: $color-light;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  position: relative;
+  bottom: 35px;
+  right: 15px;
+  display: none;
+}

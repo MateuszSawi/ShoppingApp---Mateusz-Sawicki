@@ -16,7 +16,6 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
-
   cursor: default;
 }
 
@@ -32,13 +31,10 @@
     left: 929px;
     top: 299px;
     color: $color-dark;
-
     box-sizing: border-box;
-    // border: none;
     color: inherit;
     font: inherit;
     background: $color-dark;
-    
     padding: $base-size;
     margin: math.div($base-size, 2.5) $base-size;
     background: $color-light;
@@ -50,7 +46,6 @@
 
     &.active {
       opacity: 1;
-      // transform: scale(1.2);
       background: $color-dark;
       color: $color-light;
     }
@@ -59,19 +54,4 @@
       margin-left: 0;
     }
   }
-
 }
-
-// .sizes .choices button:hover{
-//   background: rgb(47, 53, 66);
-// }
-
-// .button {
-//   position: absolute;
-//   top: -$base-size * 2;
-//   right: -$base-size * 2;
-//   font-size: $base-size * 2;
-//   border-radius: 100%;
-//   width: $base-size * 5;
-//   height: $base-size * 5;
-// }

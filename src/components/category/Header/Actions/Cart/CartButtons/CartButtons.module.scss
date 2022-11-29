@@ -1,0 +1,79 @@
+@import '../../../../../../styles/settings.scss';
+
+.cartButtons {
+  display: inline-block;
+  background-color: $color-light;
+}
+
+.ViewBagButtonDiv {
+  height: 15%;
+  width: 195px;
+  display: inline-block;
+  padding-top: 50px;
+  padding-left: 15px;
+}
+
+.CheckOutButtonDiv {
+  height: 15%;
+  width: 195px;
+  display: inline-block;
+  padding-left: 30px;
+}
+
+.CheckOutButton {
+  left: 50%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 160px;
+  height: 53px;
+  background-color: #5ECE7B;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: darken($color-success, 5%);
+  } 
+}
+
+.CheckOutButton p {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translateX(35%);
+  color: $color-light;
+}
+
+.ViewBagButton {
+  display: flex;
+  align-items: center;
+  width: 160px;
+  height: 53px;
+  border: 1px solid $color-dark;
+  background-color: $color-light;
+  cursor: pointer;
+
+  &:hover {
+    background: darken(#ededed, 5%);
+  } 
+}
+
+.ViewBagButton p {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translateX(45%);
+  color: $color-dark;
+}

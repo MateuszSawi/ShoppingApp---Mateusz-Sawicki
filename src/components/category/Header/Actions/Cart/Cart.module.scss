@@ -1,92 +1,30 @@
 @import '../../../../../styles/settings.scss';
 
-.cartIcon {
-  border: none;
-  background-color: $color-light;
-  // width: 22px;
-  // height: 22px;
-  // border: 1px solid;
-}
-
-.cartIconContainer {
-  display: inline-block; 
-  position: absolute; 
-
-  align-items: center;
-  padding: 0px;
-  // gap: 22px;
-  // width: 100%;
-  // height: 100%;
-  // border: 1px solid;
-}
-
-.cartIcon:hover .cartIconContainer{
-  background-color: #000;
-}
-
 .cart {
   width: 400px;
   height: 700px;
-  z-index: 1;
-  // position: relative; 
+  z-index: 3;
   position: absolute;
   transform: translateY(57%);
   right: -20px;
   background-color: $color-light;
-  // align-items: center;
 
-  // display: none;
-
-  border: 1px solid;
+  -webkit-box-shadow: 1px 10020px 0px 9999px rgba(57, 55, 72, 0.22);;
+  -moz-box-shadow: 1px 10020px 0px 9999px rgba(57, 55, 72, 0.22);;
+  box-shadow: 1px 10020px 0px 9999px rgba(57, 55, 72, 0.22);;
 }
-
-//---
 
 .cartFrame {
   width: 373px;
   height: 590px;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  // gap: 32px;
   position: relative; 
   left: 50%;
   transform: translateX(-50%);
   top: 3%;
-
-  border: 1px solid;
 }
-
-//---
-
-.cartBanner {
-  display: inline-block;
-  width: 100%;
-  // padding-bottom: 15px;
-  height: 10%;
-  background-color: $color-light;
-  cursor: default;
-}
-
-.cartBanner h1 {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 160%;
-  text-align: left;
-  color: #1D1F22;
-
-  display: inline-block;
-}
-
-.cartBanner p {
-  display: inline-block;
-  margin: 0;
-}
-
-//---
 
 .cartProducts {
   background-color: $color-light;
@@ -95,59 +33,16 @@
   display: block;
   padding: 0px;
   gap: 40px;
-  // position: relative; 
   overflow: auto;
-
-  // z-index: 9;
+  overflow-x: hidden;
 }
 
-
-
-
-
-//---
-
-.cartTotal {
-  display: inline-block;
-  height: 10%;
-  background-color: $color-light;
-  width: 100%;
-  position: relative; 
+.cartProducts::-webkit-scrollbar {
+  width: 7px;
+  background: $color-light;
 }
 
-.cartTotal h2 {
-  // text-align: left;
-  // display: inline-block;
-}
-
-.cartTotal p {
-  // text-align: right;
-  // margin: 0 0;
-  // width: 40%;
-  // display: inline-block;
-}
-
-.cartTotalLeftText {
-  display: inline-block;
-  height: 100%;
-  width: 50%;
-  margin: 0;
-}
-
-.cartTotalLeftText h2 {
-  
-}
-
-.cartTotalRightText {
-  display: inline-block;
-  text-align: right;
-  // height: auto;
-  width: 50%;
-  margin: 0;
-  padding-right: 8px;
-}
-
-.cartTotalRightText p {
-  margin: 0;
-  margin-top: 35px;
+.cartProducts::-webkit-scrollbar-thumb {
+  background-color: $color-outofstock;
+  border-radius: 30px;
 }

@@ -1,5 +1,4 @@
 import styles from './CurrencyIcon.module.scss';
-import clsx from 'clsx';
 import React, { useState } from "react";
 
 const CurrencyIcon = props => {
@@ -13,7 +12,7 @@ const CurrencyIcon = props => {
 
   return(
     <div className={styles.currencyContainer}>
-      <button className={clsx(styles.currencyIcon)} onClick={()=>{
+      <button className={styles.currencyIcon} onClick={()=>{
         props.handleClick();
         handleClick();
       }}>

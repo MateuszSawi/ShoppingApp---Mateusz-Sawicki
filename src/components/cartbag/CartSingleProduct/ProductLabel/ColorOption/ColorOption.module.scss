@@ -1,0 +1,78 @@
+@use 'sass:math';
+@import '../../../../../styles/settings.scss';
+
+.optionTitleColors {
+  padding: 5px 0px;
+  cursor: default;
+}
+
+.choicesColors {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  padding: 0px 0px 0px 3px;
+
+  button {
+    width: 20px;
+    height: 20px;
+    line-height: 1;;
+    border: 1x solid;
+    font: inherit;
+
+    margin: math.div($base-size, 2.5) $base-size;
+
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+
+    &.activeColors {
+      outline: 1.5px solid #5ECE7B;
+      outline-offset: 1.5px;
+    }
+
+    &.blackColor {
+      background: #000;
+    }
+  
+    &.redColor {
+      background: #e74c3c;
+    }
+  
+    &.whiteColor {
+      background: #fff;
+    }
+  
+    &.blueColor {
+      background: #3498db;
+    }
+  
+    &.greenColor {
+      background: #2ecc71;
+    }
+
+    &.grayColor {
+      background: #808080;
+    }
+
+    &.pinkColor {
+      background: #FFC0CB;
+    }
+
+    &.orangeColor {
+      background: #FFA500;
+    }
+
+    &.yellowColor {
+      background: #FFFF00;
+    }
+
+    &.brownColor {
+      background: #964B00;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

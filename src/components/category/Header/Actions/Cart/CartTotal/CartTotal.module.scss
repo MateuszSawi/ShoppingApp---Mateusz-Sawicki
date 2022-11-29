@@ -1,0 +1,40 @@
+@import '../../../../../../styles/settings.scss';
+
+.cartTotal {
+  display: inline-block;
+  height: 10%;
+  background-color: $color-light;
+  width: 100%;
+  position: relative; 
+  cursor: default;
+}
+
+.cartTotalLeftText {
+  display: inline-block;
+  height: 100%;
+  width: 50%;
+  margin: 0;
+}
+
+.cartTotalLeftText h2 {
+  font-weight: bold;
+}
+
+.cartTotalRightText {
+  display: inline-block;
+  text-align: right;
+  width: 50%;
+  margin: 0;
+  padding-right: 5px;
+}
+
+.cartTotalRightText p {
+  margin: 0;
+  margin-top: 35px;
+  font-weight: bold;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 160%;
+}

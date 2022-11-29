@@ -1,0 +1,20 @@
+.productSeparation {
+  width: 100%;
+  height: 1px;
+  top: 255px;
+  background: #E5E5E5;
+  margin: 20px 0px;
+}
+
+.removeProduct {
+  display: none;
+}
+
+.singleProductContainer {
+  height: 300px;
+  width: 100%;
+}
+
+.productWrapper{
+  display: inline-flex;
+}

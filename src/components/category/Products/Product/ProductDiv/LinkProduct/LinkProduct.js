@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 
 const LinkProduct = props => {
 
-  // console.log('LINK:', props);
-
   return (
     <Link to="/pdp" state={{from: props}}>
       <div className={styles.productDiv}>

@@ -1,0 +1,13 @@
+.rightArrow {
+  position: absolute;
+  bottom: 7%;
+  right: 7%;
+  font-size: 3rem;
+  z-index: 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.rightArrow:hover {
+  filter: brightness(70%);
+}

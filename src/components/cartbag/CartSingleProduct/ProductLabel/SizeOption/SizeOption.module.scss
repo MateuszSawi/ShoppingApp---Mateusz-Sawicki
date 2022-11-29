@@ -1,0 +1,49 @@
+@use 'sass:math';
+@import '../../../../../styles/settings.scss';
+
+.optionTitleSizes {
+  padding-bottom: 5px;
+  cursor: default;
+}
+
+.productSizes {
+  padding-top: 0px;
+}
+
+.choicesSizes {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  li {
+    width: 38px;
+  }
+
+  button {
+    width: 30px;
+    height: 30px;
+    left: 64px;
+    color: $color-dark;
+    margin-top: 0px;
+    box-sizing: border-box;
+    color: inherit;
+    font: inherit;
+    background: $color-dark;
+    margin: math.div($base-size, 2.5) $base-size;
+    background: $color-light;
+    text-align: center;
+    cursor: pointer;
+    transition: $transition;
+
+    &.activeSizes {
+      opacity: 1;
+      background: $color-dark;
+      color: $color-light;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

@@ -14,7 +14,7 @@ const ProductImage = props => {
         OUT OF STOCK
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default ProductImage;

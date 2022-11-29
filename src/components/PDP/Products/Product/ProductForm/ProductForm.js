@@ -8,20 +8,34 @@ import Price from "./Price/Price";
 import Description from "./Description/Description";
 
 const ProductForm = props => {
-  // console.log(props);
   return(
     <div className={styles.formContainer}>
       <FormTitle data={props.data}/>
-      <form onSubmit={props.hundleSubmit}>
-        <OptionSize data={props.data} currentSize={props.currentSize} setCurrentSize={props.setCurrentSize} />
+        <OptionSize 
+          data={props.data} 
+          currentSize={props.currentSize} 
+          setCurrentSize={props.setCurrentSize} />
 
-        <OptionColor data={props.data} currentColor={props.currentColor} setCurrentColor={props.setCurrentColor} />
+        <OptionColor 
+          data={props.data} 
+          currentColor={props.currentColor} 
+          setCurrentColor={props.setCurrentColor} />
 
-        <Price data={props.data} currentCurrency={props.currentCurrency} />
+        <Price 
+          data={props.data} 
+          currentCurrency={props.currentCurrency} />
           
-        <CartButton data={props.data} />
-        <Description data={props.data}/>
-      </form>
+        <CartButton 
+          data={props.data} 
+          currentColor={props.currentColor} 
+          setCurrentColor={props.setCurrentColor} 
+          currentCurrency={props.currentCurrency} 
+          cartItems={props.cartItems} 
+          setCartItems={props.setCartItems}
+          currentSize={props.currentSize} 
+          setCurrentSize={props.setCurrentSize} />
+
+        <Description data={props.data} />
     </div>
   )
 }

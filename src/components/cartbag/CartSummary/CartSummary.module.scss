@@ -1,0 +1,36 @@
+@import '../../../styles/settings.scss';
+
+.cartSummary {
+  margin: 30px 100px;
+  cursor: default;
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cartSummary h1 {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  width: 200px;
+  color: $color-dark;
+  text-align: left;
+}
+
+.cartSummary h2 {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-size: 24px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  font-weight: bold;
+  color: $color-dark;
+  text-align: left;
+}

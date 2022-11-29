@@ -6,21 +6,21 @@ import clsx from 'clsx';
 
 const Currencies = props => {
   return(
-      <div className={clsx(styles.currenciesDiv,`${props.toggleClass}`)}>
-        <ul>
-          <li>
-            <USD currentCurrency={props.currentCurrency} setCurrentCurrency={props.setCurrentCurrency} />
-          </li>
+    <div className={clsx(styles.currenciesDiv, `${props.toggleClass}`)}>
+      <ul>
+        <li>
+          <USD currentCurrency={props.currentCurrency} setCurrentCurrency={props.setCurrentCurrency} />
+        </li>
 
-          <li>
-            <EUR currentCurrency={props.currentCurrency} setCurrentCurrency={props.setCurrentCurrency} />
-          </li>
+        <li>
+          <EUR currentCurrency={props.currentCurrency} setCurrentCurrency={props.setCurrentCurrency} />
+        </li>
 
-          <li>
-            <JPY currentCurrency={props.currentCurrency} setCurrentCurrency={props.setCurrentCurrency} />
-          </li>
-        </ul>
-      </div>
+        <li>
+          <JPY currentCurrency={props.currentCurrency} setCurrentCurrency={props.setCurrentCurrency} />
+        </li>
+      </ul>
+    </div>
   );
 };
 

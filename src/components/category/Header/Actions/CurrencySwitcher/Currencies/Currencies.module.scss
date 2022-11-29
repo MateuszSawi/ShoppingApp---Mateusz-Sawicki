@@ -1,12 +1,10 @@
 .currenciesDiv {
   display: inline-block;
-  // display: none;
   position: relative;
   top: 90px;
   transform: translateX(-10%);
-  // border: 1px solid;
   float: none;
-  z-index: 2;
+  z-index: 4;
 }
 
 .currenciesDiv ul {
