@@ -39,8 +39,8 @@ const SliderContainer = props => {
           cartItem={props.cartItem}
           currentImg={currentImg} />
       )}
-      <RightArrow nextSlide={nextSlide} />
-      <LeftArrow prevSlide={prevSlide} />
+      <RightArrow length={props.length} nextSlide={nextSlide} />
+      <LeftArrow length={props.length} prevSlide={prevSlide} />
     </div>
   );
 };

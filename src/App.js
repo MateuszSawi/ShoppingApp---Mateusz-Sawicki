@@ -1,10 +1,10 @@
-import Category from './components/category/Category';
-import { Routes, Route } from 'react-router-dom';
-import Header from './components/category/Header/Header';
+import Header from './components/Header/Header';
 import Container from './components/category/Container/Container';
+import Category from './components/category/Category';
 import PDP from './components/PDP/PDP';
-import { useState} from 'react';
 import CartContainer from './components/cartbag/CartContainer';
+import { Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
 
 const App = () => {
   const [currentFilter, setCurrentFilter] = useState('ALL');
@@ -13,12 +13,32 @@ const App = () => {
 
   return (
     <>
-      <Header cartItems={cartItems} setCartItems={setCartItems} currentCurrency={currentCurrency} setCurrentCurrency={setCurrentCurrency} currentFilter={currentFilter} setCurrentFilter={setCurrentFilter}/>
+      <Header 
+        cartItems={cartItems} 
+        setCartItems={setCartItems} 
+        currentCurrency={currentCurrency} 
+        setCurrentCurrency={setCurrentCurrency} 
+        currentFilter={currentFilter} 
+        setCurrentFilter={setCurrentFilter}/>
       <Container>
         <Routes>
-          <Route path="/" element={<Category cartItems={cartItems} setCartItems={setCartItems} currentCurrency={currentCurrency} currentFilter={currentFilter} setCurrentFilter={setCurrentFilter} />} />
-          <Route exact path="/pdp" element={<PDP cartItems={cartItems} setCartItems={setCartItems} currentCurrency={currentCurrency} />} />
-          <Route exact path="/cartbag" element={<CartContainer cartItems={cartItems} setCartItems={setCartItems} currentCurrency={currentCurrency} />} />
+          <Route path="/" 
+            element={<Category 
+              cartItems={cartItems} 
+              setCartItems={setCartItems} 
+              currentCurrency={currentCurrency} 
+              currentFilter={currentFilter} 
+              setCurrentFilter={setCurrentFilter} />} />
+          <Route exact path="/pdp" 
+            element={<PDP 
+              cartItems={cartItems} 
+              setCartItems={setCartItems} 
+              currentCurrency={currentCurrency} />} />
+          <Route exact path="/cartbag" 
+            element={<CartContainer 
+              cartItems={cartItems} 
+              setCartItems={setCartItems} 
+              currentCurrency={currentCurrency} />} />
         </Routes>
       </Container>
     </>

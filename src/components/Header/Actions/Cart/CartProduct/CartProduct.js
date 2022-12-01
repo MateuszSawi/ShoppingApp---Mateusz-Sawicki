@@ -2,12 +2,12 @@ import styles from './CartProduct.module.scss';
 import clsx from 'clsx';
 
 const CartProduct = props => {
-  const IncreaseQuantity = (e) => {
+  const increaseQuantity = (e) => {
     props.cartItem.quantity += 1;
     props.setCartItems(current => [...current,]);
   }
 
-  const DecreaseQuantity = (e) => {;
+  const decreaseQuantity = (e) => {;
     props.cartItem.quantity -= 1;
     props.setCartItems(current => [...current,]);
   }
@@ -77,11 +77,11 @@ const CartProduct = props => {
       </div>
 
       <div className={styles.qtyButtons}>
-        <button className={styles.buttonPlus} onClick={IncreaseQuantity}>
+        <button className={styles.buttonPlus} onClick={increaseQuantity}>
           +
         </button>{' '}
           <p className={styles.quantity}>{props.cartItem.quantity}</p>
-        <button className={styles.buttonMinus} onClick={DecreaseQuantity}>
+        <button className={styles.buttonMinus} onClick={decreaseQuantity}>
           -
         </button>
       </div>

@@ -1,8 +1,7 @@
 import React from 'react';
 import Product from './Product/Product';
-import styles from './Products.module.scss'
-
-import { useLocation} from 'react-router-dom'
+import styles from './Products.module.scss';
+import { useLocation} from 'react-router-dom';
 
 const Products = props => {
   const location = useLocation();

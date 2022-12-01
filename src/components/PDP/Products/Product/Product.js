@@ -1,8 +1,8 @@
 import styles from './Product.module.scss';
-import { useState } from 'react';
 import ProductImages from './ProductImages/ProductImages';
 import ProductImage from './ProductImage/ProductImage';
 import ProductForm from './ProductForm/ProductForm';
+import { useState } from 'react';
 
 const Product = props => {
   const [currentColor, setCurrentColor] = useState(props.colors[0]);

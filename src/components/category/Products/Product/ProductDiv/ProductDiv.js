@@ -28,6 +28,7 @@ const ProductDiv = props => {
       ) {
         return true;
       }
+      uniqueIndex = props.cartItems.indexOf(element);
       uniqueIndex += 1;
       return false;
     });

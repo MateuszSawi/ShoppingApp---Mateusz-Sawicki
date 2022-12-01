@@ -8,7 +8,6 @@ import React, { useState } from "react";
 import clsx from 'clsx';
 
 const Cart = props => {
-
   let totalItemsQuantity = 0;
   let totalCartPrice = 0;
 
@@ -23,7 +22,7 @@ const Cart = props => {
     } else if (props.currentCurrency === '¥') {
       tempPrice = (Math.round(cartItem.prices[2].price * 100) / 100).toFixed(2);
     }
-    totalCartPrice = tempPrice*cartItem.quantity + totalCartPrice;
+    totalCartPrice = tempPrice * cartItem.quantity + totalCartPrice;
 
     return 0;
   });  
@@ -43,7 +42,7 @@ const Cart = props => {
       
       <div className={clsx(styles.cart, `${toggleMenu}`)}>
         <div className={styles.cartFrame}>
-          <CartHeading totalItemsQuantity={props.totalItemsQuantity} />
+          <CartHeading totalItemsQuantity={totalItemsQuantity} />
 
           <div className={styles.cartProducts}>
             {props.cartItems.map((cartItem) => (
@@ -68,7 +67,7 @@ const Cart = props => {
           <CartTotal currentCurrency={props.currentCurrency} finalTotalCartPrice={finalTotalCartPrice} />
         </div>
 
-        <CartButtons />
+        <CartButtons currentCurrency={props.currentCurrency} cartItems={props.cartItems}/>
       </div>
     </>
   );

@@ -1,8 +1,9 @@
 import styles from './CartContainer.module.scss';
-import CartSingleProduct from './CartSingleProduct/CartSingleProduct';
-import CartSummary from './CartSummary/CartSummary';
 import CartTitle from './CartTitle/CartTitle';
+import CartSingleProduct from './CartSingleProduct/CartSingleProduct';
 import SeparationLine from './SeparationLine/SeparationLine';
+import CartSummary from './CartSummary/CartSummary';
+import OrderButton from './OrderButton/OrderButton';
 
 const CartContainer = props => {
   
@@ -32,7 +33,6 @@ const CartContainer = props => {
   return (
     <>
       <CartTitle />
-
       <div className={styles.productsContainer}>
         {props.cartItems.map((cartItem) => (
           <CartSingleProduct  
@@ -52,13 +52,13 @@ const CartContainer = props => {
             currentCurrency={props.currentCurrency} />
         ))}
       </div>
-
       <SeparationLine />
       <CartSummary 
         tax={tax}
         totalItemsQuantity={totalItemsQuantity}
         finalTotalCartPrice={finalTotalCartPrice} 
         currentCurrency={props.currentCurrency} />
+      <OrderButton cartItems={props.cartItems} currentCurrency={props.currentCurrency} />
     </>
   );
 };
